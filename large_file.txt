@@ -1,0 +1,623 @@
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+import os
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            
+            # Send a 10MB package
+            with open("large_file.txt", "rb") as file:
+                data = file.read(10485760) # 10MB
+            tasks.append(session.post(url, data=data))
+            
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/https://www.gtamulti.com/forum/mod-galerisi/shadrazam-roleplay-guncel-oyun-modu/import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
+import aiohttp
+import asyncio
+
+async def make_request(url):
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
+        # Send GET, HEAD, and POST requests quickly
+        for i in range(200):
+            tasks = []
+            tasks.append(session.get(url))
+            tasks.append(session.head(url))
+            tasks.append(session.post(url, data={"key": "value"}))
+            responses = await asyncio.gather(*tasks)
+            for response in responses:
+                print(response.status)
+
+url_with_ssl = "https://example.com"
+url_without_ssl = "http://example.com"
+
+# send requests to a site with SSL certificate
+asyncio.ensure_future(make_request(url_with_ssl))
+
+# send requests to a site without SSL certificate
+asyncio.ensure_future(make_request(url_without_ssl))
+
+# start the event loop
+asyncio.get_event_loop().run_forever()
